@@ -57,9 +57,20 @@ class _HscreenState extends State<Hscreen> {
       //   fit: BoxFit.cover,
       //   alignment: Alignment.center,
       // ),
-      body: CircleAvatar(
-        radius: 100,
-        backgroundImage: AssetImage('assets/images/1.jpg'),
+      // body: CircleAvatar(
+      //   radius: 100,
+      //   backgroundImage: AssetImage('assets/images/1.jpg'),
+      // ),
+      body: ElevatedButton(
+        onPressed: () {},
+
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.pink,
+          textStyle: TextStyle(fontSize: 50, color: Colors.black),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          fixedSize: Size(100, 100),
+        ),
+        child: Text('button'),
       ),
     );
   }
