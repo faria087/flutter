@@ -61,18 +61,19 @@ class _HscreenState extends State<Hscreen> {
       //   radius: 100,
       //   backgroundImage: AssetImage('assets/images/1.jpg'),
       // ),
-      body: ElevatedButton.icon(
-        onPressed: () {},
+      // body: ElevatedButton.icon(
+      //   onPressed: () {},
 
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.pink,
-          textStyle: TextStyle(fontSize: 50, color: Colors.black),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          // fixedSize: Size(100, 100),
-        ),
-        label: Text('button'),
-        icon: Icon(Icons.home),
-      ),
+      //   style: ElevatedButton.styleFrom(
+      //     backgroundColor: Colors.pink,
+      //     textStyle: TextStyle(fontSize: 50, color: Colors.black),
+      //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+      //     // fixedSize: Size(100, 100),
+      //   ),
+      //   label: Text('button'),
+      //   icon: Icon(Icons.home),
+      // ),
+      body: TextButton(onPressed: () {}, child: Text('button')),
     );
   }
 }
