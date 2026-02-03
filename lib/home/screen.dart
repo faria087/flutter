@@ -74,10 +74,14 @@ class _HscreenState extends State<Hscreen> {
       //   icon: Icon(Icons.home),
       // ),
       // body: TextButton(onPressed: () {}, child: Text('button')),
-      body: OutlinedButton.icon(
+      // body: OutlinedButton.icon(
+      //   onPressed: () {},
+      //   label: Text('button'),
+      //   style: OutlinedButton.styleFrom(side: BorderSide.none),
+      // ),
+      floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        label: Text('button'),
-        style: OutlinedButton.styleFrom(side: BorderSide.none),
+        child: Icon(Icons.wechat_sharp),
       ),
     );
   }
