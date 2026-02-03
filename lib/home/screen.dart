@@ -73,7 +73,12 @@ class _HscreenState extends State<Hscreen> {
       //   label: Text('button'),
       //   icon: Icon(Icons.home),
       // ),
-      body: TextButton(onPressed: () {}, child: Text('button')),
+      // body: TextButton(onPressed: () {}, child: Text('button')),
+      body: OutlinedButton.icon(
+        onPressed: () {},
+        label: Text('button'),
+        style: OutlinedButton.styleFrom(side: BorderSide.none),
+      ),
     );
   }
 }
