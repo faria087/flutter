@@ -50,12 +50,16 @@ class _HscreenState extends State<Hscreen> {
       //     ],
       //   ),
       // ),
-      body: Image(
-        image: AssetImage('assets/images/1.jpg'),
-        height: 100,
-        width: 50,
-        fit: BoxFit.cover,
-        alignment: Alignment.center,
+      // body: Image(
+      //   image: AssetImage('assets/images/1.jpg'),
+      //   height: 100,
+      //   width: 50,
+      //   fit: BoxFit.cover,
+      //   alignment: Alignment.center,
+      // ),
+      body: CircleAvatar(
+        radius: 100,
+        backgroundImage: AssetImage('assets/images/1.jpg'),
       ),
     );
   }
