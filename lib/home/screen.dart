@@ -33,6 +33,7 @@ class _HscreenState extends State<Hscreen> {
       body: Text(
         'hello everyone , how are you?',
         maxLines: 3,
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontFamily: 'myFont',
           fontSize: 30,
