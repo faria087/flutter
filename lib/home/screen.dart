@@ -88,6 +88,8 @@ class _HscreenState extends State<Hscreen> {
         width: 400,
         child: Text('this is a box'),
         alignment: Alignment.center,
+        margin: EdgeInsets.all(6),
+        padding: EdgeInsets.all(2),
 
         decoration: BoxDecoration(
           color: Colors.amberAccent,
