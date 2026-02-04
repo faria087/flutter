@@ -102,104 +102,120 @@ class _HscreenState extends State<Hscreen> {
       //     shape: BoxShape.circle,
       //   ),
       // ),
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   crossAxisAlignment: CrossAxisAlignment.end,
+      //   spacing: 10,
+      //   children: [
+      //     Text("a table"),
+      //     Row(
+      //       children: [
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //     Row(
+      //       children: [
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //     Row(
+      //       children: [
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.all(5),
+      //           height: 50,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             color: Colors.black45,
+      //             border: Border.all(width: 3, color: Colors.white),
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ],
+      // ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        spacing: 10,
         children: [
-          Text("a table"),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-            ],
+          GestureDetector(
+            child: Text('hello tap here'),
+            onDoubleTap: () {
+              print('clicked.....');
+            },
           ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(5),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Colors.black45,
-                  border: Border.all(width: 3, color: Colors.white),
-                ),
-              ),
-            ],
+          InkWell(
+            child: Text('now click here'),
+            onLongPress: () {
+              print('welcome back');
+            },
           ),
         ],
       ),
