@@ -83,6 +83,23 @@ class _HscreenState extends State<Hscreen> {
         onPressed: () {},
         child: Icon(Icons.wechat_sharp),
       ),
+      body: Container(
+        height: 500,
+        width: 400,
+        child: Text('this is a box'),
+        alignment: Alignment.center,
+
+        decoration: BoxDecoration(
+          color: Colors.amberAccent,
+          // borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Colors.white, width: 5),
+          boxShadow: [BoxShadow(color: Colors.black12, offset: Offset(5, -10))],
+          gradient: LinearGradient(
+            colors: [Colors.blue, Colors.red, Colors.yellow],
+          ),
+          shape: BoxShape.circle,
+        ),
+      ),
     );
   }
 }
