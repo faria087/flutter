@@ -83,24 +83,125 @@ class _HscreenState extends State<Hscreen> {
         onPressed: () {},
         child: Icon(Icons.wechat_sharp),
       ),
-      body: Container(
-        height: 500,
-        width: 400,
-        child: Text('this is a box'),
-        alignment: Alignment.center,
-        margin: EdgeInsets.all(6),
-        padding: EdgeInsets.all(2),
+      // body: Container(
+      //   height: 500,
+      //   width: 400,
+      //   child: Text('this is a box'),
+      //   alignment: Alignment.center,
+      //   margin: EdgeInsets.all(6),
+      //   padding: EdgeInsets.all(2),
 
-        decoration: BoxDecoration(
-          color: Colors.amberAccent,
-          // borderRadius: BorderRadius.circular(5),
-          border: Border.all(color: Colors.white, width: 5),
-          boxShadow: [BoxShadow(color: Colors.black12, offset: Offset(5, -10))],
-          gradient: LinearGradient(
-            colors: [Colors.blue, Colors.red, Colors.yellow],
+      //   decoration: BoxDecoration(
+      //     color: Colors.amberAccent,
+      //     // borderRadius: BorderRadius.circular(5),
+      //     border: Border.all(color: Colors.white, width: 5),
+      //     boxShadow: [BoxShadow(color: Colors.black12, offset: Offset(5, -10))],
+      //     gradient: LinearGradient(
+      //       colors: [Colors.blue, Colors.red, Colors.yellow],
+      //     ),
+      //     shape: BoxShape.circle,
+      //   ),
+      // ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        spacing: 10,
+        children: [
+          Text("a table"),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+            ],
           ),
-          shape: BoxShape.circle,
-        ),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
