@@ -204,19 +204,43 @@ class _HscreenState extends State<Hscreen> {
       //   ],
       // ),
       body: Column(
+        // children: [
+        //   GestureDetector(
+        //     child: Text('hello tap here'),
+        //     onDoubleTap: () {
+        //       print('clicked.....');
+        //     },
+        //   ),
+        //   InkWell(
+        //     child: Text('now click here'),
+        //     onLongPress: () {
+        //       print('welcome back');
+        //     },
+        //   ),
+        // ],
+        spacing: 10,
         children: [
-          GestureDetector(
-            child: Text('hello tap here'),
-            onDoubleTap: () {
-              print('clicked.....');
-            },
+          TextField(
+            decoration: InputDecoration(
+              labelText: 'Email:',
+              hintText: 'enter your email',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+              prefix: Icon(Icons.home),
+              suffix: IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+            ),
           ),
-          InkWell(
-            child: Text('now click here'),
-            onLongPress: () {
-              print('welcome back');
-            },
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'enter your password',
+              labelText: 'Password?',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5)),
+              ),
+            ),
           ),
+          ElevatedButton(onPressed: () {}, child: Text('login')),
         ],
       ),
     );
