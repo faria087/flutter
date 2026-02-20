@@ -15,6 +15,9 @@ class _HscreenState extends State<Hscreen> {
     });
   }
 
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -220,7 +223,9 @@ class _HscreenState extends State<Hscreen> {
         // ],
         spacing: 10,
         children: [
+          SizedBox(height: 20),
           TextField(
+            controller: email,
             decoration: InputDecoration(
               labelText: 'Email:',
               hintText: 'enter your email',
@@ -228,18 +233,29 @@ class _HscreenState extends State<Hscreen> {
                 borderRadius: BorderRadius.circular(5),
               ),
               prefix: Icon(Icons.home),
-              suffix: IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+              suffix: IconButton(
+                onPressed: () {
+                  email.clear();
+                },
+                icon: Icon(Icons.close),
+              ),
             ),
           ),
+          SizedBox(height: 20),
           TextField(
+            controller: password,
             decoration: InputDecoration(
               hintText: 'enter your password',
               labelText: 'Password?',
+
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
             ),
+            obscureText: true,
+            obscuringCharacter: '*',
           ),
+          SizedBox(height: 20),
           ElevatedButton(onPressed: () {}, child: Text('login')),
         ],
       ),
