@@ -17,6 +17,7 @@ class _HscreenState extends State<Hscreen> {
 
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
+  final formkey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -206,58 +207,74 @@ class _HscreenState extends State<Hscreen> {
       //     ),
       //   ],
       // ),
-      body: Column(
-        // children: [
-        //   GestureDetector(
-        //     child: Text('hello tap here'),
-        //     onDoubleTap: () {
-        //       print('clicked.....');
-        //     },
-        //   ),
-        //   InkWell(
-        //     child: Text('now click here'),
-        //     onLongPress: () {
-        //       print('welcome back');
-        //     },
-        //   ),
-        // ],
-        spacing: 10,
-        children: [
-          SizedBox(height: 20),
-          TextField(
-            controller: email,
-            decoration: InputDecoration(
-              labelText: 'Email:',
-              hintText: 'enter your email',
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-              ),
-              prefix: Icon(Icons.home),
-              suffix: IconButton(
-                onPressed: () {
-                  email.clear();
-                },
-                icon: Icon(Icons.close),
+      body: Form(
+        key: formkey,
+        child: Column(
+          // children: [
+          //   GestureDetector(
+          //     child: Text('hello tap here'),
+          //     onDoubleTap: () {
+          //       print('clicked.....');
+          //     },
+          //   ),
+          //   InkWell(
+          //     child: Text('now click here'),
+          //     onLongPress: () {
+          //       print('welcome back');
+          //     },
+          //   ),
+          // ],
+          spacing: 10,
+          children: [
+            SizedBox(height: 20),
+            TextFormField(
+              controller: email,
+              decoration: InputDecoration(
+                labelText: 'Email:',
+                hintText: 'enter your email',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                prefix: Icon(Icons.home),
+                suffix: IconButton(
+                  onPressed: () {
+                    email.clear();
+                  },
+                  icon: Icon(Icons.close),
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 20),
-          TextField(
-            controller: password,
-            decoration: InputDecoration(
-              hintText: 'enter your password',
-              labelText: 'Password?',
+            SizedBox(height: 20),
+            TextFormField(
+              controller: password,
+              decoration: InputDecoration(
+                hintText: 'enter your password',
+                labelText: 'Password?',
 
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(5)),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                ),
               ),
+              obscureText: true,
+              obscuringCharacter: '*',
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return "Please enter password.....";
+                }
+                return null;
+              },
             ),
-            obscureText: true,
-            obscuringCharacter: '*',
-          ),
-          SizedBox(height: 20),
-          ElevatedButton(onPressed: () {}, child: Text('login')),
-        ],
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                if (formkey.currentState!.validate()) {
+                  print('password: ${password.text}');
+                }
+              },
+              child: Text('login'),
+            ),
+          ],
+        ),
       ),
     );
   }
