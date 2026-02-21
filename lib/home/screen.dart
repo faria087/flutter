@@ -18,6 +18,8 @@ class _HscreenState extends State<Hscreen> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   final formkey = GlobalKey<FormState>();
+  final name = TextEditingController();
+  final confirmpass = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -207,71 +209,158 @@ class _HscreenState extends State<Hscreen> {
       //     ),
       //   ],
       // ),
+      // body: Form(
+      //   key: formkey,
+      //   child: Column(
+      // children: [
+      //   GestureDetector(
+      //     child: Text('hello tap here'),
+      //     onDoubleTap: () {
+      //       print('clicked.....');
+      //     },
+      //   ),
+      //   InkWell(
+      //     child: Text('now click here'),
+      //     onLongPress: () {
+      //       print('welcome back');
+      //     },
+      //   ),
+      // ],
+      //     spacing: 10,
+      //     children: [
+      //       SizedBox(height: 20),
+      //       TextFormField(
+      //         controller: email,
+      //         decoration: InputDecoration(
+      //           labelText: 'Email:',
+      //           hintText: 'enter your email',
+      //           border: OutlineInputBorder(
+      //             borderRadius: BorderRadius.circular(5),
+      //           ),
+      //           prefix: Icon(Icons.home),
+      //           suffix: IconButton(
+      //             onPressed: () {
+      //               email.clear();
+      //             },
+      //             icon: Icon(Icons.close),
+      //           ),
+      //         ),
+      //       ),
+      //       SizedBox(height: 20),
+      //       TextFormField(
+      //         controller: password,
+      //         decoration: InputDecoration(
+      //           hintText: 'enter your password',
+      //           labelText: 'Password?',
+
+      //           border: OutlineInputBorder(
+      //             borderRadius: BorderRadius.all(Radius.circular(5)),
+      //           ),
+      //         ),
+      //         obscureText: true,
+      //         obscuringCharacter: '*',
+      //         validator: (value) {
+      //           if (value == null || value.isEmpty) {
+      //             return "Please enter password.....";
+      //           }
+      //           return null;
+      //         },
+      //       ),
+      //       SizedBox(height: 20),
+      //       ElevatedButton(
+      //         onPressed: () {
+      //           if (formkey.currentState!.validate()) {
+      //             print('password: ${password.text}');
+      //           }
+      //         },
+      //         child: Text('login'),
+      //       ),
+      //     ],
+      //   ),
+      // ),
       body: Form(
         key: formkey,
         child: Column(
-          // children: [
-          //   GestureDetector(
-          //     child: Text('hello tap here'),
-          //     onDoubleTap: () {
-          //       print('clicked.....');
-          //     },
-          //   ),
-          //   InkWell(
-          //     child: Text('now click here'),
-          //     onLongPress: () {
-          //       print('welcome back');
-          //     },
-          //   ),
-          // ],
           spacing: 10,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
+            TextFormField(
+              controller: name,
+              decoration: InputDecoration(
+                labelText: 'Name:',
+                hintText: 'Enter Your Name',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(2),
+                ),
+                fillColor: Colors.blueAccent,
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your name';
+                }
+              },
+            ),
+            SizedBox(height: 5),
             TextFormField(
               controller: email,
               decoration: InputDecoration(
                 labelText: 'Email:',
-                hintText: 'enter your email',
+                hintText: 'Enter Your Email',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(2),
                 ),
-                prefix: Icon(Icons.home),
-                suffix: IconButton(
-                  onPressed: () {
-                    email.clear();
-                  },
-                  icon: Icon(Icons.close),
-                ),
+                fillColor: Colors.blueAccent,
               ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your name';
+                }
+              },
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 5),
             TextFormField(
               controller: password,
               decoration: InputDecoration(
-                hintText: 'enter your password',
-                labelText: 'Password?',
-
+                labelText: 'Password:',
+                hintText: 'Enter Your Password',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  borderRadius: BorderRadius.circular(2),
                 ),
+                fillColor: Colors.blueAccent,
               ),
-              obscureText: true,
-              obscuringCharacter: '*',
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return "Please enter password.....";
+                  return 'Please enter your name';
                 }
-                return null;
               },
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 5),
+            TextFormField(
+              controller: confirmpass,
+              decoration: InputDecoration(
+                labelText: 'Confirm Password:',
+                hintText: 'Enter Your Password',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(2),
+                ),
+                fillColor: Colors.blueAccent,
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your name';
+                }
+              },
+            ),
             ElevatedButton(
               onPressed: () {
                 if (formkey.currentState!.validate()) {
+                  print('name: ${name.text}');
+                  print('email: ${email.text}');
                   print('password: ${password.text}');
+                  print('confirmpass: ${confirmpass.text}');
                 }
               },
-              child: Text('login'),
+              child: Text('Register'),
             ),
           ],
         ),
