@@ -287,6 +287,12 @@ class _HscreenState extends State<Hscreen> {
             TextFormField(
               controller: name,
               decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    name.clear();
+                  },
+                  icon: Icon(Icons.close),
+                ),
                 labelText: 'Name:',
                 hintText: 'Enter Your Name',
                 border: OutlineInputBorder(
@@ -304,6 +310,13 @@ class _HscreenState extends State<Hscreen> {
             TextFormField(
               controller: email,
               decoration: InputDecoration(
+                prefixIcon: Icon(Icons.man_4),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    email.clear();
+                  },
+                  icon: Icon(Icons.close),
+                ),
                 labelText: 'Email:',
                 hintText: 'Enter Your Email',
                 border: OutlineInputBorder(
@@ -321,6 +334,12 @@ class _HscreenState extends State<Hscreen> {
             TextFormField(
               controller: password,
               decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    password.clear();
+                  },
+                  icon: Icon(Icons.close),
+                ),
                 labelText: 'Password:',
                 hintText: 'Enter Your Password',
                 border: OutlineInputBorder(
@@ -338,6 +357,12 @@ class _HscreenState extends State<Hscreen> {
             TextFormField(
               controller: confirmpass,
               decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    confirmpass.clear();
+                  },
+                  icon: Icon(Icons.close),
+                ),
                 labelText: 'Confirm Password:',
                 hintText: 'Enter Your Password',
                 border: OutlineInputBorder(
