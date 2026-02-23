@@ -393,15 +393,16 @@ class _HscreenState extends State<Hscreen> {
       body: SizedBox(
         height: 20,
         child: ListView(
-          scrollDirection: Axis.vertical,
+          // scrollDirection: Axis.vertical,
           padding: EdgeInsets.symmetric(vertical: 10),
           children: [
+            //
             for (int i = 0; i < 100; i++)
-              Container(
-                color: Colors.blue,
-                height: 50,
-                width: double.infinity,
-                margin: EdgeInsets.symmetric(vertical: 10),
+              ListTile(
+                title: Text('maerry cury'),
+                subtitle: Text('helloo im a nothing'),
+                leading: CircleAvatar(),
+                trailing: Icon(Icons.done),
               ),
           ],
         ),
