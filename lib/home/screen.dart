@@ -278,117 +278,130 @@ class _HscreenState extends State<Hscreen> {
       //     ],
       //   ),
       // ),
-      body: Form(
-        key: formkey,
-        child: Column(
-          spacing: 10,
-          children: [
-            SizedBox(height: 10),
-            TextFormField(
-              controller: name,
-              decoration: InputDecoration(
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    name.clear();
-                  },
-                  icon: Icon(Icons.close),
-                ),
-                labelText: 'Name:',
-                hintText: 'Enter Your Name',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(2),
-                ),
-                fillColor: Colors.blueAccent,
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter your name';
-                }
-              },
+      // body: Form(
+      //   key: formkey,
+      //   child: Column(
+      //     spacing: 10,
+      //     children: [
+      //       SizedBox(height: 10),
+      //       TextFormField(
+      //         controller: name,
+      //         decoration: InputDecoration(
+      //           suffixIcon: IconButton(
+      //             onPressed: () {
+      //               name.clear();
+      //             },
+      //             icon: Icon(Icons.close),
+      //           ),
+      //           labelText: 'Name:',
+      //           hintText: 'Enter Your Name',
+      //           border: OutlineInputBorder(
+      //             borderRadius: BorderRadius.circular(2),
+      //           ),
+      //           fillColor: Colors.blueAccent,
+      //         ),
+      //         validator: (value) {
+      //           if (value == null || value.isEmpty) {
+      //             return 'Please enter your name';
+      //           }
+      //         },
+      //       ),
+      //       SizedBox(height: 5),
+      //       TextFormField(
+      //         controller: email,
+      //         decoration: InputDecoration(
+      //           prefixIcon: Icon(Icons.man_4),
+      //           suffixIcon: IconButton(
+      //             onPressed: () {
+      //               email.clear();
+      //             },
+      //             icon: Icon(Icons.close),
+      //           ),
+      //           labelText: 'Email:',
+      //           hintText: 'Enter Your Email',
+      //           border: OutlineInputBorder(
+      //             borderRadius: BorderRadius.circular(2),
+      //           ),
+      //           fillColor: Colors.blueAccent,
+      //         ),
+      //         validator: (value) {
+      //           if (value == null || value.isEmpty) {
+      //             return 'Please enter your name';
+      //           }
+      //         },
+      //       ),
+      //       SizedBox(height: 5),
+      //       TextFormField(
+      //         controller: password,
+      //         decoration: InputDecoration(
+      //           suffixIcon: IconButton(
+      //             onPressed: () {
+      //               password.clear();
+      //             },
+      //             icon: Icon(Icons.close),
+      //           ),
+      //           labelText: 'Password:',
+      //           hintText: 'Enter Your Password',
+      //           border: OutlineInputBorder(
+      //             borderRadius: BorderRadius.circular(2),
+      //           ),
+      //           fillColor: Colors.blueAccent,
+      //         ),
+      //         validator: (value) {
+      //           if (value == null || value.isEmpty) {
+      //             return 'Please enter your name';
+      //           }
+      //         },
+      //       ),
+      //       SizedBox(height: 5),
+      //       TextFormField(
+      //         controller: confirmpass,
+      //         decoration: InputDecoration(
+      //           suffixIcon: IconButton(
+      //             onPressed: () {
+      //               confirmpass.clear();
+      //             },
+      //             icon: Icon(Icons.close),
+      //           ),
+      //           labelText: 'Confirm Password:',
+      //           hintText: 'Enter Your Password',
+      //           border: OutlineInputBorder(
+      //             borderRadius: BorderRadius.circular(2),
+      //           ),
+      //           fillColor: Colors.blueAccent,
+      //         ),
+      //         validator: (value) {
+      //           if (value == null || value.isEmpty) {
+      //             return 'Please enter your name';
+      //           }
+      //         },
+      //       ),
+      //       ElevatedButton(
+      //         onPressed: () {
+      //           if (formkey.currentState!.validate()) {
+      //             print('name: ${name.text}');
+      //             print('email: ${email.text}');
+      //             print('password: ${password.text}');
+      //             print('confirmpass: ${confirmpass.text}');
+      //           }
+      //         },
+      //         child: Text('Register'),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        padding: EdgeInsets.symmetric(vertical: 10),
+        children: [
+          for (int i = 0; i < 100; i++)
+            Container(
+              color: Colors.blue,
+              height: 50,
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(vertical: 10),
             ),
-            SizedBox(height: 5),
-            TextFormField(
-              controller: email,
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.man_4),
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    email.clear();
-                  },
-                  icon: Icon(Icons.close),
-                ),
-                labelText: 'Email:',
-                hintText: 'Enter Your Email',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(2),
-                ),
-                fillColor: Colors.blueAccent,
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter your name';
-                }
-              },
-            ),
-            SizedBox(height: 5),
-            TextFormField(
-              controller: password,
-              decoration: InputDecoration(
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    password.clear();
-                  },
-                  icon: Icon(Icons.close),
-                ),
-                labelText: 'Password:',
-                hintText: 'Enter Your Password',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(2),
-                ),
-                fillColor: Colors.blueAccent,
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter your name';
-                }
-              },
-            ),
-            SizedBox(height: 5),
-            TextFormField(
-              controller: confirmpass,
-              decoration: InputDecoration(
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    confirmpass.clear();
-                  },
-                  icon: Icon(Icons.close),
-                ),
-                labelText: 'Confirm Password:',
-                hintText: 'Enter Your Password',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(2),
-                ),
-                fillColor: Colors.blueAccent,
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter your name';
-                }
-              },
-            ),
-            ElevatedButton(
-              onPressed: () {
-                if (formkey.currentState!.validate()) {
-                  print('name: ${name.text}');
-                  print('email: ${email.text}');
-                  print('password: ${password.text}');
-                  print('confirmpass: ${confirmpass.text}');
-                }
-              },
-              child: Text('Register'),
-            ),
-          ],
-        ),
+        ],
       ),
     );
   }
