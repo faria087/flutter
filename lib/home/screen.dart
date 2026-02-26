@@ -391,7 +391,8 @@ class _HscreenState extends State<Hscreen> {
       //   ),
       // ),
       //
-      body: Row(
+      body: Flex(
+        direction: Axis.vertical,
         children: [
           Flexible(
             flex: 3,
