@@ -391,15 +391,15 @@ class _HscreenState extends State<Hscreen> {
       //   ),
       // ),
       //
-      body: Column(
+      body: Row(
         children: [
-          Expanded(
+          Flexible(
             flex: 3,
-            child: Container(color: Colors.blueAccent, width: double.infinity),
+            child: Container(color: Colors.blueAccent, height: double.infinity),
           ),
           Spacer(),
-          Expanded(
-            child: Container(color: Colors.pink, width: double.infinity),
+          Flexible(
+            child: Container(color: Colors.pink, height: double.infinity),
           ),
         ],
       ),
