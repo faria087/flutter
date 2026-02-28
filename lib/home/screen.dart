@@ -391,16 +391,36 @@ class _HscreenState extends State<Hscreen> {
       //   ),
       // ),
       //
-      body: Flex(
-        direction: Axis.vertical,
+      // body: Flex(
+      //   direction: Axis.vertical,
+      //   children: [
+      //     Flexible(
+      //       flex: 3,
+      //       child: Container(color: Colors.blueAccent, height: double.infinity),
+      //     ),
+      //     Spacer(),
+      //     Flexible(
+      //       child: Container(color: Colors.pink, height: double.infinity),
+      //     ),
+      //   ],
+      // ),
+      body: Stack(
         children: [
-          Flexible(
-            flex: 3,
-            child: Container(color: Colors.blueAccent, height: double.infinity),
+          Container(height: 200, width: 200, color: Colors.deepPurple),
+          Positioned(
+            right: 50,
+            bottom: 50,
+            child: Container(height: 100, width: 100, color: Colors.pinkAccent),
           ),
-          Spacer(),
-          Flexible(
-            child: Container(color: Colors.pink, height: double.infinity),
+          Positioned(
+            child: Container(
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.green.withAlpha(128),
+              ),
+            ),
           ),
         ],
       ),
