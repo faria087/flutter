@@ -425,11 +425,12 @@ class _HscreenState extends State<Hscreen> {
       //   ],
       // ),
       body: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 100,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
         ),
+
         children: [
           Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
           Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
