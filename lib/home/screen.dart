@@ -404,24 +404,39 @@ class _HscreenState extends State<Hscreen> {
       //     ),
       //   ],
       // ),
-      body: Stack(
+      // body: Stack(
+      //   children: [
+      //     Container(height: 200, width: 200, color: Colors.deepPurple),
+      //     Positioned(
+      //       right: 50,
+      //       bottom: 50,
+      //       child: Container(height: 100, width: 100, color: Colors.pinkAccent),
+      //     ),
+      //     Positioned(
+      //       child: Container(
+      //         height: 100,
+      //         width: 100,
+      //         decoration: BoxDecoration(
+      //           shape: BoxShape.circle,
+      //           color: Colors.green.withAlpha(128),
+      //         ),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
         children: [
-          Container(height: 200, width: 200, color: Colors.deepPurple),
-          Positioned(
-            right: 50,
-            bottom: 50,
-            child: Container(height: 100, width: 100, color: Colors.pinkAccent),
-          ),
-          Positioned(
-            child: Container(
-              height: 100,
-              width: 100,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.green.withAlpha(128),
-              ),
-            ),
-          ),
+          Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
+          Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
+          Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
+          Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
+          Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
+          Image.asset('assets/images/1.jpg', fit: BoxFit.cover),
         ],
       ),
     );
