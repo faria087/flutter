@@ -14,85 +14,78 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: Stack(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Form(
-              key: _formkey,
-              child: Column(
-                children: [
-                  SizedBox(height: 20),
-                  FlutterLogo(size: 50),
-                  SizedBox(height: 20),
-                  Text(
-                    'Please login first to get started.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    controller: email,
-                    decoration: InputDecoration(
-                      hintText: 'Email',
-                      border: OutlineInputBorder(),
+          ListView(
+            children: [
+              Form(
+                key: _formkey,
+                child: Column(
+                  children: [
+                    SizedBox(height: 20),
+                    FlutterLogo(size: 50),
+                    SizedBox(height: 10),
+                    Text(
+                      'Log in to get started',
+                      style: TextStyle(fontSize: 15),
+                      textAlign: TextAlign.center,
                     ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'please enter your email';
-                      }
-                      return null;
-                    },
-                  ),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    controller: password,
-                    decoration: InputDecoration(
-                      hintText: 'Password',
-                      border: OutlineInputBorder(),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'please enter your email';
-                      }
-                      return null;
-                    },
-                  ),
-                  SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {
-                      if (_formkey.currentState!.validate()) {}
-                    },
-                    child: Text('login'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      textStyle: TextStyle(color: Colors.white, fontSize: 20),
-                      padding: EdgeInsets.all(15),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Forgot password?'),
+                    SizedBox(height: 10),
+                    TextFormField(
+                      controller: email,
+                      decoration: InputDecoration(
+                        hintText: 'email',
+                        border: OutlineInputBorder(),
                       ),
-                    ],
-                  ),
-
-                  SizedBox(
-                    width: double.infinity,
-                    height: 30,
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      child: Text("don't have a account? Register Now"),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'please enter your email';
+                        }
+                        return null;
+                      },
                     ),
-                  ),
-                ],
+                    SizedBox(height: 10),
+                    TextFormField(
+                      controller: password,
+                      decoration: InputDecoration(
+                        hintText: 'password',
+                        border: OutlineInputBorder(),
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'please enter your password';
+                        }
+                        return null;
+                      },
+                    ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        if (_formkey.currentState!.validate()) {}
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueAccent,
+                        foregroundColor: Colors.black,
+                      ),
+                      child: Text(
+                        'login',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text('forgot password?'),
+                    ),
+                    SizedBox(height: 60),
+                    OutlinedButton(
+                      onPressed: () {},
+                      child: Text('Have not any account? Register here'),
+                    ),
+                  ],
+                ),
               ),
-            ),
+            ],
           ),
         ],
       ),
